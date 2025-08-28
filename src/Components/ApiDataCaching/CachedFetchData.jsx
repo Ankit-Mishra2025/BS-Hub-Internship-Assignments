@@ -16,6 +16,13 @@ const CachedFetchData = () => {
     localStorage.setItem("apidata", JSON.stringify(result));
   };
 
+const refreshData=()=>{
+    localStorage.removeItem("apidata")
+    CachedFetchData()
+    setLoading(true)
+}
+
+
   useEffect(() => {
     const getCachedData = localStorage.getItem("apidata");
 
@@ -37,8 +44,9 @@ const CachedFetchData = () => {
   return (
     <div className=" p-5  text-center">
       <h1 className="mt-5 font-bold text-2xl">Cached Data in Local Storage</h1>
+<button className="bg-amber-500 rounded-md p-2 mt-2 " onClick={refreshData}> Refresh data 🔄</button>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-8">
         {fetchdata.map((items, index) => {
           return (
             <div className="border  p-4 rounded-md bg-white" key={index}>
