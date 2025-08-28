@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
-import LoadingFetchedData from "../LoadingFetchedData";
+
+import LoadingFetchedData from "./LoadingFetchedData";
 
 const FetchingData = () => {
   const [data, setData] = useState([]);
   const [Loading, setLoading] = useState(true);
+
+
   const fetchedData = async () => {
+  
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     let fetchedResult = await res.json();
+   
     setData(fetchedResult);
+    
     setLoading(false);
+ 
   };
 
   useEffect(() => {
@@ -25,7 +32,10 @@ const FetchingData = () => {
         Here is the list of all fetched data
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+   
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-3">
+    
         {data.map((items, index) => {
           return (
             <div
