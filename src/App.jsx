@@ -3,6 +3,7 @@ import FetchingData from "./Components/ApiDataFetching/FetchingData";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import CachedFetchData from "./Components/ApiDataCaching/CachedFetchData";
 import ReactQueryFetch from "./Components/ApiDataCaching/ReactQueryFetch";
+import SearchData from "./Components/SearchingFetchedData/SearchData";
 
 const App = () => {
   return (
@@ -15,11 +16,13 @@ const App = () => {
           Task 2
         </Link>
         <Link to="/task2/react-query" className="bg-emerald-300 p-2 rounded-md">Task 2(React Query)</Link>
+        <Link to="/task3" className="bg-pink-400 p-2 rounded-md"> Task 3</Link>
       </nav>
       <Routes>
         <Route path="/task1" element={<FetchingData />} />
         <Route path="/task2" element={<CachedFetchData />} />
         <Route path="/task2/react-query" element={<ReactQueryFetch/>}/>
+        <Route path="/task3" element={<SearchData/>}/>
       </Routes>
     </div>
   );

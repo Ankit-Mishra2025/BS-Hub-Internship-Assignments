@@ -25,6 +25,7 @@ const FetchingData = () => {
   if (Loading) {
     return <LoadingFetchedData />;
   }
+ 
 
   return (
     <div className="mx-auto p-5 w-full text-center">
