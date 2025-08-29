@@ -1,12 +1,41 @@
-# React + Vite
+# Task-3 → Searching in Cached Data  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎯 Objective  
+Enhance cached data usage by adding **search functionality**.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚡ Features  
+- Fetch data from API & store in cache/local storage  
+- **Search box** → filters data in real-time from cache  
+- **Refresh button** → makes fresh API call  
+- Spinner → only shown during fresh fetch  
+- Works offline (since data is served from cache)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔄 Flow Diagram  
+
+API → Fetch Data → Store in Cache/Local Storage  
+⬇  
+User Input → Search Filter Applied on Cached Data  
+⬇  
+Refresh → Force API Call → Update Cache + Storage  
+
+---
+
+## 🧑‍💻 Concepts Used  
+- **Array filter()** → for searching data  
+- **React Query** → cache management  
+- **Local Storage** → persistence  
+- **Controlled Input (React)** → for search box  
+
+---
+
+## 📌 Working Flow  
+1. On mount → load from cache/local storage  
+2. User types in search box → filter cached data dynamically  
+3. Refresh button → fetches fresh API data  
+4. Loader appears only for API fetch  
+
+---
