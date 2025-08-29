@@ -1,12 +1,40 @@
-# React + Vite
+# Task-1 → Basic API Fetch  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎯 Objective  
+To fetch data from a public API and display it in React efficiently with a loading spinner.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚡ Features  
+- Fetch data from `https://jsonplaceholder.typicode.com/posts`  
+- Store the response in **React state**  
+- Render the list dynamically  
+- Show a **loading spinner** until data is fetched  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔄 Flow Diagram  
+
+API → Fetch Request → Response(JSON) → Store in `useState` → Render UI  
+
+---
+
+## 🧑‍💻 Concepts Used 
+
+- **React useState & useEffect** → to manage state and lifecycle  
+- **Fetch API with async/await** → for data fetching  
+- **Conditional Rendering** → show loader vs data  
+
+---
+
+## 📌 Working Flow  
+1. On component mount → fetch request goes to API  
+2. API sends back data in JSON format  
+3. Data is stored in `useState`  
+4. Loader disappears & data is displayed in list form  
+
+---
+
+## Example Output  
+- Loader → *"Loading..."*  
+- After fetch → List of posts displayed in boxes
