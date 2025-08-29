@@ -23,7 +23,7 @@ It is possible to navigate from one task to another task by clicking on navigati
 - Showing a loading spinner ,if data is coming from API
 - Persistent the data in cache memory and local storage
 
-### 3. **Searching Data in Cached Memory data**
+### 3. Task -3 **Searching Data in Cached Memory data**
 
  - fetch data from public API'
  - Added a search input to filter item on text search
